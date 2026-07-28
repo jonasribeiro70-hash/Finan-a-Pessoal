@@ -1,0 +1,20 @@
+{
+  "name": "financeiro-pessoal",
+  "version": "1.0.0",
+  "description": "Sistema de financas pessoais com backend Node/Express, SQLite e autenticacao JWT",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node --watch backend/server.js",
+    "initdb": "node backend/db/init.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
