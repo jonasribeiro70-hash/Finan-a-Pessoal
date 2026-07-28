@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: financeiro-pessoal
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 22.22.2
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: DB_PATH
+        value: /var/data/financeiro.sqlite
+    disk:
+      name: financeiro-data
+      mountPath: /var/data
+      sizeGB: 1
